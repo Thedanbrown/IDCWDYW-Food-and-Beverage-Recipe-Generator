@@ -17,12 +17,41 @@
       </p>
     </div>
   </section>
-  <div class="modal" .is-active>
+  <div id="food-modal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <!-- Any other Bulma elements you want -->
+      <div class="box">
+        <p>Modal JS example</p>
+        <!-- Your content -->
+      </div>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
+    </div>
   </div>
-  </body>
+  <button class="js-modal-trigger" data-target="food-modal">
+    Food
+  </button>
+
+  <div id="drink-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <p>Modal JS example</p>
+        <!-- Your content -->
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+  </div>
+  <button class="js-modal-trigger" data-target="drink-modal">
+    drink
+  </button>
+
+
+
+  <script src="./assets/js/script.js"></script>
 </html>
+
+
+    
+</div>
