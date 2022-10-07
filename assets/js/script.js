@@ -1,4 +1,4 @@
-const $el = ".food-moda"
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
