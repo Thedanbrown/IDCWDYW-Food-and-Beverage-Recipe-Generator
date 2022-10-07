@@ -6,21 +6,19 @@
     <title>IDCWDYW</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
+  
   <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                 Hello World
-            </h1>
-                <p class="subtitle">
-             My first website with <strong>Bulma</strong>!
-            </p>
-        </div>
-    </section>
+    <header>
+        <h1 class="title">I Don't Care, What do you want</h1>
+        <p class="subtitle">A Food and Beverage Generator for when no one knows what they want</p>
+    </header>
+
+<!--food Modal-->
     <div id="food-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="box">
+                <h2>Choose any specific foods or dietary restrictions you would like to include</h2>
                 <div class="field">
                     <div class="control">
                       <label class="checkbox">
@@ -31,19 +29,18 @@
                       </label>
                     </div>
                 </div>
-                <p>Modal JS example</p>
-        <!-- Your content -->
             </div>
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
-
     <button class="js-modal-trigger" data-target="food-modal">Food</button>
 
+<!--Drink Modal-->
     <div id="drink-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="box">
+                <h2>Choose a liqour</h2>
                 <div class="field">
                     <div class="control">
                       <label class="checkbox">
@@ -59,6 +56,8 @@
         </div>
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
+  <button class="js-modal-trigger" data-target="drink-modal">drink</button>
+  
   <section class ="section">
     <div class="container">
       <div class="tile is-ancestor">
@@ -82,17 +81,10 @@
       </div>
     </div>
   </section>
+  <script src="./assets/js/script.js"></script>
   </body>
 </html>
-    </div>
-
-    <button class="js-modal-trigger" data-target="drink-modal">
-    drink
-    </button>
-    
-    <script src="./assets/js/script.js"></script>
-</html>
 
 
     
-</div>
+

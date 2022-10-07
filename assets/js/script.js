@@ -1,5 +1,5 @@
 
-
+//modal functions
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
     function openModal($el) {
@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // Add a keyboard event to close all modals
-    // document.addEventListener('keydown', (event) => {
-    //   const e = event || window.event;
+    //Add a keyboard event to close all modals
+    document.addEventListener('keydown', (event) => {
+      const e = event || window.event;
   
-    //   if (e.keyCode === 27) { // Escape key
-    //     closeAllModals();
-    //   }
-    // });
+      if (e.keyCode === 27) { // Escape key
+        closeAllModals();
+      }
+    });
   });
+  //end of modal functions
