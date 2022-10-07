@@ -6,7 +6,9 @@
     <title>IDCWDYW</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
+  
   <body>
+<<<<<<< HEAD
   <section class="section">
     <div class="container">
       <h1 class="title">
@@ -23,8 +25,85 @@
     <div class="modal-background"></div>
     <div class="modal-content">
       <!-- Any other Bulma elements you want -->
+=======
+    <header>
+        <h1 class="title">I Don't Care, What do you want</h1>
+        <p class="subtitle">A Food and Beverage Generator for when no one knows what they want</p>
+    </header>
+
+<!--food Modal-->
+    <div id="food-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <h2>Choose any specific foods or dietary restrictions you would like to include</h2>
+                <div class="field">
+                    <div class="control">
+                      <label class="checkbox">
+                        <input type="checkbox">
+                            <a href="#">Beef</a>
+                        <input type="checkbox">
+                            <a href="#">chicken</a>
+                      </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+>>>>>>> c6e1d9c490153b427d918e95283dcb496daac5c7
     </div>
+    <button class="js-modal-trigger" data-target="food-modal">Food</button>
+
+<!--Drink Modal-->
+    <div id="drink-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <h2>Choose a liqour</h2>
+                <div class="field">
+                    <div class="control">
+                      <label class="checkbox">
+                        <input type="checkbox">
+                            <a href="#"></a>
+                        <input type="checkbox">
+                            <a href="#"></a>
+                      </label>
+                    </div>
+                </div>
+        <!-- Your content -->
+            </div>
+        </div>
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
+  <button class="js-modal-trigger" data-target="drink-modal">drink</button>
+  
+  <section class ="section">
+    <div class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-8 is-vertical is-parent">
+          <div class="tile is-child notification is-warning"> 
+            <p class="title">recipe</p>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tenetur aut, assumenda eius voluptates eligendi qui ab praesentium adipisci minus recusandae, quod architecto corrupti ipsa. Aut sapiente nulla ex totam!
+            </div>
+          </div>
+          <div class="tile is-child notification is-info">
+            <p class="title">drink</p>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus asperiores dolorum amet ducimus sunt quasi, illo cupiditate consequuntur quisquam corrupti, laboriosam consectetur similique eveniet a in obcaecati eius, aliquam ipsa.
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+      </div>
+    </div>
+  </section>
+  <script src="./assets/js/script.js"></script>
   </body>
 </html>
+
+
+    
+

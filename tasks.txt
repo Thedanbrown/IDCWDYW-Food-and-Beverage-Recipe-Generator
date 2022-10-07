@@ -1,0 +1,15 @@
+HTML:
+    header w/logo
+     div container w/ 3 more div containers
+     1st div contains modals/dropdowns for recipe criteria
+     
+     2nd div will contain food recipe with button to generate based on criteria and one to generate a purely random recipe. 
+     Java script will append recipe and images
+     
+     3rd div is the same as 2nd but for drinks
+
+     footer
+
+CSS: all done through bulma.io
+
+JS
