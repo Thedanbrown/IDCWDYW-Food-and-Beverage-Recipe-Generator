@@ -9,3 +9,11 @@
 .navbar-item-2 img{
   border-radius: 10px;
 }
+
+.control {
+  font-weight: bold;
+}
+
+.box h3 {
+  font-weight: bolder;
+}
