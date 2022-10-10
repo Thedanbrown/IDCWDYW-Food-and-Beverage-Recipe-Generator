@@ -1,0 +1,11 @@
+
+/* For navbar only */
+.navbar-brand {
+  /* margin-top: 20px; */
+  padding: 20px;
+  columns: white;
+}
+
+.navbar-item-2 img{
+  border-radius: 10px;
+}
