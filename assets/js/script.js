@@ -55,3 +55,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   //end of modal functions
+
+//getting modal data for food. adds or subtracts from an array when checkbox is checked
+let foodCheckBoxes = document.querySelectorAll('.food');
+let foodListArray = [];
+
+for(var checkbox of foodCheckBoxes) {
+  checkbox.addEventListener('change' ,function(e){
+    if(this.checked == true) {
+      foodListArray.push(this.value);
+    } else {
+      foodListArray = foodListArray.filter(e => e !== this.value);
+
+    }
+    console.log(foodListArray)
+  })
+}
+//end of modal data for food
+
+//getting modal data for drink. adds or subtracts from an array when checkbox is checked
+let drinkCheckBoxes = document.querySelectorAll('.drink');
+let drinkListArray = [];
+
+for(var checkbox of drinkCheckBoxes) {
+  checkbox.addEventListener('change' ,function(e){
+    if(this.checked == true) {
+      drinkListArray.push(this.value);
+    } else {
+      drinkListArray = drinkListArray.filter(e => e !== this.value);
+
+    }
+    console.log(drinkListArray)
+  })
+}
+//end of modal data for drink
