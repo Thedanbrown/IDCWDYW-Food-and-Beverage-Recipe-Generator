@@ -1,4 +1,14 @@
 
+// for mobile menu of navbar
+const burgerIcon = document.querySelector('#burger');
+const navbarMenu = document.querySelector('#nav-links');
+
+burgerIcon.addEventListener('click',() => {
+  navbarMenu.classList.toggle('is-active');
+}
+);
+
+
 //modal functions
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
