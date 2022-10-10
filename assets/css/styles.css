@@ -1,4 +1,6 @@
-
+body {
+ background-color: #121212; 
+}
 /* For navbar only */
 .navbar-brand {
   /* margin-top: 20px; */
@@ -34,4 +36,12 @@
   max-height: 100px;
   max-width: 100px;
 
+}
+
+.control {
+  font-weight: bold;
+}
+
+.box h3 {
+  font-weight: bolder;
 }
