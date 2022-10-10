@@ -1,4 +1,6 @@
-
+body {
+ background-color: #121212; 
+}
 /* For navbar only */
 .navbar-brand {
   /* margin-top: 20px; */
@@ -9,6 +11,7 @@
 .navbar-item-2 img{
   border-radius: 10px;
 }
+
 .recipe-tile{
   margin-bottom: 20px;
   padding: 50px;
@@ -35,3 +38,13 @@
   max-width: 100px;
 
 }
+
+
+.control {
+  font-weight: bold;
+}
+
+.box h3 {
+  font-weight: bolder;
+}
+
