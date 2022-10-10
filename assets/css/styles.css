@@ -1,4 +1,6 @@
-
+body {
+ background-color: #121212; 
+}
 /* For navbar only */
 .navbar-brand {
   /* margin-top: 20px; */

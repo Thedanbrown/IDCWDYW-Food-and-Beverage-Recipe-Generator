@@ -55,3 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   //end of modal functions
+
+  $('input[name=neighborhood_id]').change(function() {
+    $('#area').val(
+        $('[name=neighborhood_id]:checked').map(function() {
+            return $(this).val();
+        }).get().join(',')
+   );
+});
