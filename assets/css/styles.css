@@ -8,29 +8,28 @@ body {
   columns: white;
 }
 
+.navbar {
+  background-color: #28ac8b;
+}
 .navbar-item-2 img{
   border-radius: 10px;
 }
 
 .recipe-tile{
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #485fc7;
-  color: #ffffff;
+  background-color: #8899a6;
+  color:  black;
+  padding: 1rem;
+  font-size: 1.2rem;
 }
 .recipe-tile img{
   max-height:100px;
   max-width: 100px;
-  margin-right: 300px;
 }
-.drink-tile{ margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #485fc7;
-  color: #ffffff;
+.drink-tile{ 
+  background-color: #8899a6;
+  color:  black;
+  padding: 1rem;
+  font-size: 1.2rem;
 
 }
 .drink-tile img{
@@ -48,3 +47,46 @@ body {
   font-weight: bolder;
 }
 
+.modals {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15%;
+  background-color: #8899a6;
+  color: black;
+}
+
+.modals h2 {
+  gap: 0%;
+
+}
+
+.random-food-recipe{
+  background-color: #192734;
+  color: white;
+  cursor:pointer;
+  border: none;
+  /* height: 36px;
+  width: 74px; */
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+}
+.random-drink-recipe{
+  background-color: #192734;
+  color: white;
+  cursor:pointer;
+  border: none;
+  /* height: 36px;
+  width: 74px; */
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+}
