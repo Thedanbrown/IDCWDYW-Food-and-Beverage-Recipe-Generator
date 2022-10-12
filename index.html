@@ -1,90 +1,259 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IDCWDYW</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                 Hello World
-            </h1>
-                <p class="subtitle">
-             My first website with <strong>Bulma</strong>!
-            </p>
-        </div>
-    </section>
-    <div id="food-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box">
-                <p>Modal JS example</p>
-        <!-- Your content -->
-            </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDCWDYW</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <!-- Logo / Brand -->
+  <nav class="navbar has-shadow">
+
+    <div class="navbar-brand">
+      <a href="#" class="navbar-item"></a>
+      <a class="navbar-item-2">
+        <img src="./assets/Imges/Img1.PNG" alt="logo" style="max-height: 70px">
+      </a>
+      <h1>Random Food and Drink Generator When You Do Not Know What You Want. </h1>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </div>
+    <div class="navbar-menu" id="nav-links" title="">
+      <div class="navbar-end">
+        <a href="#" class="navbar-item">My Account</a>
+        <a href="#" class="navbar-item">Recent Recipes</a>
+        <a href="#" class="navbar-item">Order/Save Missing Recipes</a>
+      </div>
+    </div>
+  </nav>
 
-    <button class="js-modal-trigger" data-target="food-modal">Food</button>
+<section class="section">
+  <div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="tile is-child box modals">
+          <h2>Click for any food or drink preferences</h2>
+          <!--food Modal-->
+          <div id="food-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <div class="box">
+                <h3>Choose any specific protein or type of dish you would like.</h3>
+        <br>
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="beef">
+              Beef
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="chicken">
+              Chicken
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="pork">
+              Pork
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="fish">
+              Fish
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="shellfish">
+              Shellfish
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="lamb">
+              Lamb
+            </label>
+            <br>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="main-course">
+              Main Course
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="food"  value="dessert">
+              Dessert
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="breakfast">
+              Breakfast
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="appetizer">
+              Appetizer
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="soup">
+              Soup
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="snack">
+              Snack
+            </label>
 
-    <div id="drink-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box">
-                <p>Modal JS example</p>
-        <!-- Your content -->
-            </div>
+            <br>
+            <br>
+            <h3>Any dietary restrictions?</h3>
+            <br>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="dairy-free">
+              Dairy Free
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="egg-free">
+              Egg Free
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="gluten">
+              Gluten
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="grain">
+              Grain
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="peanut">
+              Peanut
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="seafood">
+              Seafood
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="sesame">
+              Sesame
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="shellfish">
+              Shellfish
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="soy">
+              Soy
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="sulfite">
+              Sulfite
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="tree-nut">
+              Tree nut
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="wheat">
+              Wheat
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="vegetarian">
+              Vegetarian
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="food" value="vegan">
+              Vegan
+            </label>          
+          </div>
         </div>
+      </div>
+    </div>
     <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+      <button class="js-modal-trigger button is-dark button is-large btn"  data-target="food-modal">Food</button>
+
+  <!--Drink Modal-->
+        <div id="drink-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <h3>Choose a liqour</h3>
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="rum">
+              Rum
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="vodka">
+              Vodka
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="whiskey">
+              Whiskey
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="bourbon">
+              Bourbon
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="scotch">
+              Scotch
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="tequila">
+              Tequila
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="gin">
+              Gin
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="cognac">
+              Cognac
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="drink" value="brandy">
+              Brandy
+            </label>
+            
+          </div>
+        </div>
+        <!-- Your content -->
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+        <button class="js-modal-trigger button is-dark button is-large btn" data-target="drink-modal">drink</button>
+          
+        </div>
+      </div>
+      <div class="tile is-10 is-vertical is-parent">
+        <div class="tile is-child box recipe-tile">
+          <img src="./assets/Imges/Recipes-Banner.jpg" alt="recipe-book-image" class="float-right" />
+          <button class="random-food-recipe">
+            Find me a recipe!
+          </button>
+          <button class="random-food-recipe">
+            Choose for me!!!
+          </button>
+          <p class="title">recipe</p>
+          <div class="content">
+          </div>
+      </div>
+      <div class="tile is-child box drink-tile">
+        <img src="assets/Imges/drink recipes.jpg" alt="drink-recipe-image"  class="float-right" />
+        <button class="random-food-recipe">
+          Find me a recipe!
+        </button>
+        <button class="random-drink-recipe">
+          Choose for me!!!
+        </button>
+        <p class="title">Drinks</p>
+        <div class="content">
+        </div>
   </div>
-  <article class="criteria">
-    <div class="section">
-      <div class="tile is-ancestor">
-        <div class="tile is-parent ">
-          <div class="tile is-child notifcation is-info">
-            <p class=""
-          </div>
-        </div>
-      </div>
     </div>
-  </article>
-  <section class ="section">
-    <div class="container">
-      <div class="tile is-ancestor">
-        <div class="tile is-8 is-vertical is-parent">
-          <div class="tile is-child notification is-warning"> 
-            <p class="title">recipe</p>
-            <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tenetur aut, assumenda eius voluptates eligendi qui ab praesentium adipisci minus recusandae, quod architecto corrupti ipsa. Aut sapiente nulla ex totam!
-            </div>
-          </div>
-          <div class="tile is-child notification is-info">
-            <p class="title">drink</p>
-            <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus asperiores dolorum amet ducimus sunt quasi, illo cupiditate consequuntur quisquam corrupti, laboriosam consectetur similique eveniet a in obcaecati eius, aliquam ipsa.
-            </div>
-          </div>
-        </div>
-      </div>
-        
-        
-      </div>
-    </div>
-  </section>
-  </body>
+  </div>
+</section>  
+
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
 </html>
-    </div>
-
-    <button class="js-modal-trigger" data-target="drink-modal">
-    drink
-    </button>
-    
-    <script src="./assets/js/script.js"></script>
-</html>
-
-
-    
-</div>
