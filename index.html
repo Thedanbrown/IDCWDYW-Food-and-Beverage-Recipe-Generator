@@ -5,20 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IDCWDYW</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
+
 </head>
 
 <body>
   <!-- Logo / Brand -->
-  <nav class="navbar has-shadow is-primary">
+  <nav class="navbar has-shadow">
 
     <div class="navbar-brand">
       <a href="#" class="navbar-item"></a>
       <a class="navbar-item-2">
-        <img src="./assets/Imges/Img1.PNG" alt="logo" style="max-height: 70px">
-        <h1>Random Food and Drink Generator When You Do Not Know What You Want. </h1>
+        <img src="./assets/Imges/Logo 2.PNG" alt="logo" style="max-height: 70px">
       </a>
+      <div class="header">
+        <div class="content has-text-centered">
+          <p><strong> I don't care, What do you want</strong> </p>
+        </div>
+      </div>
       <a class="navbar-burger" id="burger">
         <span></span>
         <span></span>
@@ -34,13 +40,26 @@
     </div>
   </nav>
 
+  <section class="hero is-medium is-dark hero-image">
+  <div class="hero-body">
+    <p class="hero-title">
+      A random food and drink recipe generator for when no one knows what they want
+    </p>
+  </div>
+</section>
 
-  <!--food Modal-->
-  <div id="food-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <div class="box">
-        <h3>Choose any specific protein or type of dish you would like.</h3>
+<section class="section">
+  <div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent tile-parent">
+        <div class="tile is-2 is-child box modals">
+          <h2>Food preferences?</h2>
+          <!--food Modal-->
+          <div id="food-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <div class="box">
+                <h3>Choose any specific protein or type of dish you would like.</h3>
         <br>
         <div class="field">
           <div class="control">
@@ -159,11 +178,10 @@
       </div>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-  <button class="js-modal-trigger button is-dark button is-large"  data-target="food-modal">Food</button>
-
+          </div>
+      <button class="js-modal-trigger button is-dark button is-large btn"  data-target="food-modal">Food</button>
   <!--Drink Modal-->
-  <div id="drink-modal" class="modal">
+        <div id="drink-modal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
       <div class="box">
@@ -206,46 +224,60 @@
               <input type="checkbox" class="drink" value="brandy">
               Brandy
             </label>
-            
           </div>
         </div>
-        <!-- Your content -->
       </div>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-  <button class="js-modal-trigger button is-dark button is-large" data-target="drink-modal">drink</button>
-
-  <section class="section">
-    <div class="container">
-      <div class="tile is-ancestor">
-        <div class="tile is-8 is-vertical is-parent">
-          <div class="recipe-tile">
-            <img src="./assets/Imges/Recipes-Banner.jpg" alt="recipe-book-image" class="float-right" />
-            <p class="title">recipe</p>
-            <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tenetur aut, assumenda eius voluptates
-              eligendi qui ab praesentium adipisci minus recusandae, quod architecto corrupti ipsa. Aut sapiente nulla
-              ex totam!
-            </div>
+        </div>
+        <h2>Pick a Liquor</h2>
+        <button class="js-modal-trigger button is-dark button is-large btn" data-target="drink-modal">Drink</button>
+        </div>
+        <div class="tile is-child box recipe-tile">
+          <section class="recipe is-dark image">
+          <img src="./assets/Imges/vintage-recipes-1849463.jpg" alt="vintage recipe papers" class="float-right" />
+          </section>
+          <button class="search-btn button is-dark button is-medium" id="user-food-btn">
+            Find me a recipe!
+          </button>
+          <button class="search-btn button is-dark button is-medium" id="random-food-btn">
+            Choose for me!!!
+          </button>
+          <p class="title">Food Recipe</p>
+          <div class="content">
           </div>
-          <div class="drink-tile">
-            <img src="assets/Imges/drink recipes.jpg" alt="drink-recipe-image"  class="float-right" />
-            <p class="title">Drinks</p>
-            <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus asperiores dolorum amet ducimus sunt
-              quasi, illo cupiditate consequuntur quisquam corrupti, laboriosam consectetur similique eveniet a in
-              obcaecati eius, aliquam ipsa.
-            </div>
-          </div>
+      </div>
+      <div class="tile is-child box drink-tile">
+        <section class="drink is-dark image">
+        <img src="assets/Imges/cocktail-drinks-38428551.jpg" alt="drink-recipe-image"  class="float-right" />
+        </section>
+        <button class="search-btn button is-dark button is-medium" id="user-drink-btn">
+          Find me a recipe!
+        </button>
+        <button class="search-btn button is-dark button is-medium" id="random-drink-btn">
+          Choose for me!!!
+        </button>
+        <p class="title">Drinks</p>
+        <div class="content">
         </div>
       </div>
+  </div>
 
-
-    </div>
-    </div>
   </section>
+
+  <!-- footer  -->
+  <footer class="footer bg-black">
+    <div class="content has-text-centered">
+      <p>
+        Copyright&copy; 2022 Random Food and Drink Generator
+      </p>
+    </div>
+
+
+  </footer>
+
   <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>

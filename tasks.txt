@@ -12,4 +12,13 @@ HTML:
 
 CSS: all done through bulma.io
 
-JS
+Updated todo- 10/12/22
+finish header and footer
+finish recipe tiles
+
+
+add event listeners for generate buttons(need classes)
+pull data from modal arrays
+make api requests
+get data from api's and generate to recipe tiles
+make save to client storage buttons 
