@@ -43,8 +43,8 @@ body {
 }
 
 .recipe-tile img{
-  max-height:100px;
-  max-width: 100px;
+  max-height:150px;
+  max-width: 400px;
 }
 
 .drink-tile{ 
@@ -56,8 +56,8 @@ body {
 }
 
 .drink-tile img{
-  max-height: 100px;
-  max-width: 100px;
+  max-height: 150px;
+  max-width: 400px;
 
 }
 
