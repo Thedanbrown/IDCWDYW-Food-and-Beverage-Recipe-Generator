@@ -100,37 +100,8 @@ body {
   font-weight: bold;
 
 }
-<<<<<<< Updated upstream
-=======
 
-.random-food-recipe{
-  background-color: #192734;
-  color: white;
-  cursor:pointer;
-  border: none;
-  /* height: 36px;
-  width: 74px; */
-  border-radius: 18px;
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
-  margin-left: 8px;
-  transition: box-shadow 0.15s;
-}
-.random-drink-recipe{
-  background-color: #192734;
-  color: white;
-  cursor:pointer;
-  border: none;
-  /* height: 36px;
-  width: 74px; */
-  border-radius: 18px;
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
-  margin-left: 8px;
-  transition: box-shadow 0.15s;
-}
+
 
 .footer {
   margin-top: 100px;
@@ -144,4 +115,9 @@ body {
     margin: 100px;
   }
 }
->>>>>>> Stashed changes
+
+
+.search-btn {
+  margin-top: 5px;
+}
+
