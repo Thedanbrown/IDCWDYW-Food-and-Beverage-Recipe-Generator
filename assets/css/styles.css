@@ -11,6 +11,7 @@ body {
 .navbar-item-2 img{
   border-radius: 10px;
 }
+
 .recipe-tile{
   margin-bottom: 20px;
   padding: 50px;
@@ -38,6 +39,7 @@ body {
 
 }
 
+
 .control {
   font-weight: bold;
 }
@@ -45,3 +47,4 @@ body {
 .box h3 {
   font-weight: bolder;
 }
+
