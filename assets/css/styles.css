@@ -4,16 +4,31 @@ body {
 /* For navbar only */
 .navbar-brand {
   /* margin-top: 20px; */
-  padding: 20px;
+  padding: 30px;
   columns: white;
 }
 
-.navbar {
-  background-color: #28ac8b;
+.navbar, .section {
+  background-color: rgb(211, 208, 208);
 }
 .navbar-item-2 img{
   border-radius: 10px;
+  size: 20px;
 }
+
+.header p{
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 30px;
+  color: #121212;
+  font-family: "Tangerine",
+    serif;
+  font-size: 50px;
+  margin: auto 150px;
+}
+
 
 .hero-image {
   background: linear-gradient(
@@ -86,6 +101,23 @@ body {
 
 }
 
+
+
+.footer {
+  margin-top: 100px;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: small;
+}
+
+@media screen and (max-width: 775px) {
+  div.tile is-parent tile-parent {
+    margin: 100px;
+  }
+}
+
+
 .search-btn {
   margin-top: 5px;
 }
+
