@@ -33,12 +33,20 @@
       </div>
     </div>
   </nav>
+  
+  <section class="hero is-medium is-dark hero-image">
+  <div class="hero-body">
+    <p class="hero-title">
+      A random food and drink recipe generator for when no one knows what the want
+    </p>
+  </div>
+</section>
 
-<section class="section">
+  <section class="section">
   <div class="container">
     <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <div class="tile is-child box modals">
+      <div class="tile is-parent tile-parent">
+        <div class="tile is-2 is-child box modals">
           <h2>Click for any food or drink preferences</h2>
           <!--food Modal-->
           <div id="food-modal" class="modal">
@@ -222,8 +230,7 @@
         <button class="js-modal-trigger button is-dark button is-large btn" data-target="drink-modal">drink</button>
           
         </div>
-      </div>
-      <div class="tile is-10 is-vertical is-parent">
+      <!-- <div class="tile is-10 is-vertical is-parent"> -->
         <div class="tile is-child box recipe-tile">
           <img src="./assets/Imges/Recipes-Banner.jpg" alt="recipe-book-image" class="float-right" />
           <button class="random-food-recipe">
@@ -247,6 +254,7 @@
         <p class="title">Drinks</p>
         <div class="content">
         </div>
+      </div>
   </div>
     </div>
   </div>
