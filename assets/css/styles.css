@@ -15,23 +15,46 @@ body {
   border-radius: 10px;
 }
 
+.hero-image {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ), url("fruits-and-vegetables-food-background-spices-ingredients-berries-banner-from-above-136872957.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 1px 1px #121212;
+}
+
+.tile-parent {
+  gap: 10%;
+}
+
 .recipe-tile{
-  background-color: #8899a6;
+  background-color: #ffffff;
   color:  black;
   padding: 1rem;
   font-size: 1.2rem;
 }
+
 .recipe-tile img{
   max-height:100px;
   max-width: 100px;
 }
+
 .drink-tile{ 
-  background-color: #8899a6;
+  background-color: #ffffff;
   color:  black;
   padding: 1rem;
   font-size: 1.2rem;
 
 }
+
 .drink-tile img{
   max-height: 100px;
   max-width: 100px;
@@ -53,7 +76,9 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 15%;
-  background-color: #8899a6;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  /* font-weight: bolder; */
   color: black;
 }
 
