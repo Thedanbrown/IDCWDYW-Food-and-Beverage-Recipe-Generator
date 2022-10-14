@@ -89,3 +89,38 @@ for(var checkbox of drinkCheckBoxes) {
   })
 }
 //end of modal data for drink
+
+//figuring out fetch requests.
+var randomFoodEL = document.getElementById('random-food-btn');
+var randomDrinkEL = document.getElementById('random-drink-btn');
+var userFoodEL = document.getElementById('user-food-btn');
+var userDrinkEL = document.getElementById('user-drink-btn');
+
+var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
+// var drinkApi = ''
+
+// getting a completely random food recipe from api
+//What to append from food api: 
+//recipes->0->extended ingredients->[]->original
+//recipes->0->instructions
+//recipes->0->title
+//recipes->0->image
+//recipes->0->spoonacularSourceUrl
+
+//appending to drink-recipe-content and food-recipe-content
+
+function getRandomFoodRecipe() {
+  fetch(foodApi)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+}
+randomFoodEL.addEventListener('click', getRandomFoodRecipe);
+
+// getting a completely random drink recipe from api
+function getRandomDrinkRecipe() {
+  fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php?')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+}
+
+randomDrinkEL.addEventListener('click', getRandomDrinkRecipe);
