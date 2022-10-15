@@ -95,24 +95,39 @@ var randomFoodEL = document.getElementById('random-food-btn');
 var randomDrinkEL = document.getElementById('random-drink-btn');
 var userFoodEL = document.getElementById('user-food-btn');
 var userDrinkEL = document.getElementById('user-drink-btn');
+var drinkRecipe = document.getElementById('drink-content')
+var foodRecipe = document.getElementById('food-content')
+var recipeTitle = document.getElementById('recipe-title')
+var foodInstructions = document.getElementById('food-instructions')
+var foodImg = document.getElementById('food-img')
+var foodIngredients = document.getElementById('food-ingredients')
+let ingredients = [];
 
 var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
-// var drinkApi = ''
-
-// getting a completely random food recipe from api
-//What to append from food api: 
-//recipes->0->extended ingredients->[]->original
-//recipes->0->instructions
-//recipes->0->title
-//recipes->0->image
-//recipes->0->spoonacularSourceUrl
 
 //appending to drink-recipe-content and food-recipe-content
 
-function getRandomFoodRecipe() {
-  fetch(foodApi)
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+async function getRandomFoodRecipe() {
+  const recipe = await fetch(foodApi)
+  .then((response) => response.json()) 
+  .then((data) => {
+    console.log(data) 
+    data.recipes[0].extendedIngredients.forEach(ingredient => {
+      ingredients.push(ingredient.original)  
+    });
+    recipeTitle.innerHTML = data.recipes[0].title
+    foodInstructions.innerHTML = data.recipes[0].instructions
+    foodImg.src = data.recipes[0].image
+    console.log(ingredients)
+    var ulEl = "<ul>"
+    ingredients.forEach(ingredient => {
+      ulEl += "<li>" + ingredient + "</li>" 
+    })
+    ulEl += "</ul>"
+    foodIngredients.innerHTML = ulEl
+}) .catch(error => {
+    console.log(error)
+  });
 }
 randomFoodEL.addEventListener('click', getRandomFoodRecipe);
 

@@ -47,7 +47,11 @@ body {
 }
 
 .tile-parent {
-  gap: 10%;
+  gap: 2%;
+}
+
+.tile {
+  text-align: center;
 }
 
 .recipe-tile{
