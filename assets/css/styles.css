@@ -83,7 +83,7 @@
   text-shadow: 1px 1px #121212;
 }
 
-#drink-content , #food-content h3 {
+#drink-content h3 , #food-content h3 {
   color: white;
   text-shadow: 1px 1px #121212;
 }
