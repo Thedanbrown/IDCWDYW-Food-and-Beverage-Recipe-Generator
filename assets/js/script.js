@@ -101,17 +101,21 @@ var recipeTitle = document.getElementById('recipe-title')
 var foodInstructions = document.getElementById('food-instructions')
 var foodImg = document.getElementById('food-img')
 var foodIngredients = document.getElementById('food-ingredients')
-let ingredients = [];
+var drinkTitle = document.getElementById('drink-recipe-title')
+var drinkInstructions = document.getElementById('drink-instructions')
+var DrinkImg = document.getElementById('drink-img')
 
 var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
-
-//appending to drink-recipe-content and food-recipe-content
-
+var drinkApi = 'http://www.thecocktaildb.com/api/json/v1/1/random.php'
+var userDrinkApi = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka'
+//Fetch data from food api and generate completely random recipe. use innerHTML to add recipe to recipe tile on page
 async function getRandomFoodRecipe() {
   const recipe = await fetch(foodApi)
   .then((response) => response.json()) 
   .then((data) => {
-    console.log(data) 
+    console.log(data)
+    let ingredients = [];
+    ingredients = [];
     data.recipes[0].extendedIngredients.forEach(ingredient => {
       ingredients.push(ingredient.original)  
     });
@@ -130,12 +134,65 @@ async function getRandomFoodRecipe() {
   });
 }
 randomFoodEL.addEventListener('click', getRandomFoodRecipe);
+//food recipe using user criteria
+async function getUserFoodRecipe() {
+  const recipe = await fetch(foodApi)//add user criteria to fetch request
+  .then((response) => response.json()) 
+  .then((data) => {
+    console.log(data)
+    let ingredients = [];
+    ingredients = [];
+    data.recipes[0].extendedIngredients.forEach(ingredient => {
+      ingredients.push(ingredient.original)  
+    });
+    recipeTitle.innerHTML = data.recipes[0].title
+    foodInstructions.innerHTML = data.recipes[0].instructions
+    foodImg.src = data.recipes[0].image
+    console.log(ingredients)
+    var ulEl = "<ul>"
+    ingredients.forEach(ingredient => {
+      ulEl += "<li>" + ingredient + "</li>" 
+    })
+    ulEl += "</ul>"
+    foodIngredients.innerHTML = ulEl
+}) .catch(error => {
+    console.log(error)
+  });
+}
+userFoodEL.addEventListener('click', getUserFoodRecipe);
 
 // getting a completely random drink recipe from api
-function getRandomDrinkRecipe() {
-  fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php?')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-}
+// still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
+// and set into ul with id "drink-ingredients"
 
+async function getRandomDrinkRecipe() {
+  const recipe = await fetch(drinkApi)
+  .then((response) => response.json()) 
+  .then((data) => {
+    console.log(data)  
+    drinkTitle.innerHTML = data.drinks[0].strDrink
+    drinkInstructions.innerHTML = data.drinks[0].strInstructions
+    DrinkImg.src = data.drinks[0].strDrinkThumb
+}) .catch(error => {
+    console.log(error)
+  });
+}
 randomDrinkEL.addEventListener('click', getRandomDrinkRecipe);
+
+// getting a drink recipe from api
+// still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
+//ignore this one for now. don't think the api will generate a random recipe this way
+
+async function getUserDrinkRecipe() {
+  const recipe = await fetch(userDrinkApi)
+  .then((response) => response.json()) 
+  .then((data) => {
+    console.log(data)  
+    drinkTitle.innerHTML = data.drinks[0].strDrink
+    drinkInstructions.innerHTML = data.drinks[0].strInstructions
+    DrinkImg.src = data.drinks[0].strDrinkThumb
+}) .catch(error => {
+    console.log(error)
+  });
+}
+userDrinkEL.addEventListener('click', getUserDrinkRecipe);
