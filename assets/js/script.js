@@ -64,10 +64,19 @@ for(var checkbox of foodCheckBoxes) {
   checkbox.addEventListener('change' ,function(e){
     if(this.checked == true) {
       foodListArray.push(this.value);
+      for (let i = 0; i < foodListArray.length; i++) {
+      var userFood  = foodListArray.slice(0);
+      getUserFoodRecipe(userFood);
+      console.log('userFood');
+// document.getElementById("demo").innerHTML = fruits + "<br><br>" + citrus;
+  ;
+}
     } else {
       foodListArray = foodListArray.filter(e => e !== this.value);
 
     }
+
+  
     console.log(foodListArray)
   })
 }
@@ -105,7 +114,7 @@ var drinkTitle = document.getElementById('drink-recipe-title')
 var drinkInstructions = document.getElementById('drink-instructions')
 var DrinkImg = document.getElementById('drink-img')
 
-var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
+var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=cce9f01f58714018a7f824038bcbb4f8'
 var drinkApi = 'http://www.thecocktaildb.com/api/json/v1/1/random.php'
 var userDrinkApi = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka'
 //Fetch data from food api and generate completely random recipe. use innerHTML to add recipe to recipe tile on page
@@ -135,9 +144,16 @@ async function getRandomFoodRecipe() {
 }
 randomFoodEL.addEventListener('click', getRandomFoodRecipe);
 
-//food recipe using user criteria
-async function getUserFoodRecipe() {
-  const recipe = await fetch(foodApi)//add user criteria to fetch request
+//food recipe using user criteriavar 
+// var baseUrl= 'https://api.spoonacular.com/recipes/findByIngredients'
+// var userSelected ;
+
+
+
+async function getUserFoodRecipe(searchparams) {
+  var baseUrl= 'https://api.spoonacular.com/recipes/findByIngredients='
+searchparams '+'searchparams '+'
+const recipe = await fetch(baseUrl)//add user criteria to fetch request
   .then((response) => response.json()) 
   .then((data) => {
     console.log(data)
@@ -166,34 +182,34 @@ userFoodEL.addEventListener('click', getUserFoodRecipe);
 // still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
 // and set into ul with id "drink-ingredients"
 
-async function getRandomDrinkRecipe() {
-  const recipe = await fetch(drinkApi)
-  .then((response) => response.json()) 
-  .then((data) => {
-    console.log(data)  
-    drinkTitle.innerHTML = data.drinks[0].strDrink
-    drinkInstructions.innerHTML = data.drinks[0].strInstructions
-    DrinkImg.src = data.drinks[0].strDrinkThumb
-}) .catch(error => {
-    console.log(error)
-  });
-}
-randomDrinkEL.addEventListener('click', getRandomDrinkRecipe);
+// async function getRandomDrinkRecipe() {
+//   const recipe = await fetch(drinkApi)
+//   .then((response) => response.json()) 
+//   .then((data) => {
+//     console.log(data)  
+//     drinkTitle.innerHTML = data.drinks[0].strDrink
+//     drinkInstructions.innerHTML = data.drinks[0].strInstructions
+//     DrinkImg.src = data.drinks[0].strDrinkThumb
+// }) .catch(error => {
+//     console.log(error)
+//   });
+// }
+// randomDrinkEL.addEventListener('click', getRandomDrinkRecipe);
 
-// getting a drink recipe from api
-// still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
-//ignore this one for now. don't think the api will generate a random recipe this way
+// // getting a drink recipe from api
+// // still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
+// //ignore this one for now. don't think the api will generate a random recipe this way
 
-async function getUserDrinkRecipe() {
-  const recipe = await fetch(userDrinkApi)
-  .then((response) => response.json()) 
-  .then((data) => {
-    console.log(data)  
-    drinkTitle.innerHTML = data.drinks[0].strDrink
-    drinkInstructions.innerHTML = data.drinks[0].strInstructions
-    DrinkImg.src = data.drinks[0].strDrinkThumb
-}) .catch(error => {
-    console.log(error)
-  });
-}
-userDrinkEL.addEventListener('click', getUserDrinkRecipe);
+// // async function getUserDrinkRecipe() {
+// //   const recipe = await fetch(userDrinkApi)
+//   .then((response) => response.json()) 
+//   .then((data) => {
+//     console.log(data)  
+//     drinkTitle.innerHTML = data.drinks[0].strDrink
+//     drinkInstructions.innerHTML = data.drinks[0].strInstructions
+//     DrinkImg.src = data.drinks[0].strDrinkThumb
+// }) .catch(error => {
+//     console.log(error)
+//   });
+// }
+// userDrinkEL.addEventListener('click', getUserDrinkRecipe);
