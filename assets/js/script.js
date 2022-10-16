@@ -134,6 +134,7 @@ async function getRandomFoodRecipe() {
   });
 }
 randomFoodEL.addEventListener('click', getRandomFoodRecipe);
+
 //food recipe using user criteria
 async function getUserFoodRecipe() {
   const recipe = await fetch(foodApi)//add user criteria to fetch request

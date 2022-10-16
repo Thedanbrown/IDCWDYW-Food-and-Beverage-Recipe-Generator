@@ -83,7 +83,7 @@
   text-shadow: 1px 1px #121212;
 }
 
-.generate-title {
+#drink-content , #food-content h3 {
   color: white;
   text-shadow: 1px 1px #121212;
 }
