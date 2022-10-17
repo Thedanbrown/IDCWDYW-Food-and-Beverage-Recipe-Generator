@@ -1,24 +1,14 @@
-HTML:
-    header w/logo
-     div container w/ 3 more div containers
-     1st div contains modals/dropdowns for recipe criteria
-     
-     2nd div will contain food recipe with button to generate based on criteria and one to generate a purely random recipe. 
-     Java script will append recipe and images
-     
-     3rd div is the same as 2nd but for drinks
+center title
+get ingredients and measurements for drink recipe on the page
+remove nav buttons
+clean up code
+remove drink modal
+clean up food modal text
+background image for modal box?
+client side data - micky
+README
+Powerpoint
+final text for everything
+what in the footer?
+fix alert to modal
 
-     footer
-
-CSS: all done through bulma.io
-
-Updated todo- 10/12/22
-finish header and footer
-finish recipe tiles
-
-
-add event listeners for generate buttons(need classes)
-pull data from modal arrays
-make api requests
-get data from api's and generate to recipe tiles
-make save to client storage buttons 

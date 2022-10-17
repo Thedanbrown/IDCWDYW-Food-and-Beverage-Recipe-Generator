@@ -8,7 +8,6 @@ burgerIcon.addEventListener('click',() => {
 }
 );
 
-
 //modal functions
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
@@ -67,31 +66,12 @@ for(var checkbox of foodCheckBoxes) {
    else {
       foodListArray = foodListArray.filter(e => e !== this.value);
 }
-
-
   console.log(foodListString)
   })
 }
 //end of modal data for food
 
-//getting modal data for drink. adds or subtracts from an array when checkbox is checked
-let drinkCheckBoxes = document.querySelectorAll('.drink');
-let drinkListArray = [];
-let drinkListString = '';
-for(var checkbox of drinkCheckBoxes) {
-  checkbox.addEventListener('change' ,function(e){
-    if(this.checked == true) {
-      drinkListArray.push(this.value);
-    } else {
-      drinkListArray = drinkListArray.filter(e => e !== this.value);
-   }
-   
-    console.log(drinkListArray)
-  })
-}
-//end of modal data for drink
-
-//figuring out fetch requests.
+//Setting all Variables
 var randomFoodEL = document.getElementById('random-food-btn');
 var randomDrinkEL = document.getElementById('random-drink-btn');
 var userFoodEL = document.getElementById('user-food-btn');
@@ -105,10 +85,8 @@ var foodIngredients = document.getElementById('food-ingredients')
 var drinkTitle = document.getElementById('drink-recipe-title')
 var drinkInstructions = document.getElementById('drink-instructions')
 var DrinkImg = document.getElementById('drink-img')
-
 var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=cce9f01f58714018a7f824038bcbb4f8'
 var drinkApi = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
-var userDrinkApi = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka'
 
 //Fetch data from food api and generate completely random recipe. use innerHTML to add recipe to recipe tile on page
 async function getRandomFoodRecipe() {
@@ -137,12 +115,7 @@ async function getRandomFoodRecipe() {
 }
 randomFoodEL.addEventListener('click', getRandomFoodRecipe);
 
-//food recipe using user criteriavar 
-// var baseUrl= 'https://api.spoonacular.com/recipes/findByIngredients'
-// var userSelected ;
-
-
-
+//Fetch data from food api and generate recipe using some user criteria. use innerHTML to add recipe to recipe tile on page
 async function getUserFoodRecipe() {
   foodListString = '';
   for(let i = 0; i < foodListArray.length; i++) {
@@ -193,21 +166,3 @@ async function getRandomDrinkRecipe() {
   });
 }
 randomDrinkEL.addEventListener('click', getRandomDrinkRecipe);
-
-// // getting a drink recipe from api
-// // still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
-// //ignore this one for now. don't think the api will generate a random recipe this way
-
-// // async function getUserDrinkRecipe() {
-// //   const recipe = await fetch(userDrinkApi)
-//   .then((response) => response.json()) 
-//   .then((data) => {
-//     console.log(data)  
-//     drinkTitle.innerHTML = data.drinks[0].strDrink
-//     drinkInstructions.innerHTML = data.drinks[0].strInstructions
-//     DrinkImg.src = data.drinks[0].strDrinkThumb
-// }) .catch(error => {
-//     console.log(error)
-//   });
-// }
-// userDrinkEL.addEventListener('click', getUserDrinkRecipe);
