@@ -22,7 +22,7 @@
       </a>
       <div class="header">
         <div class="content has-text-centered">
-          <p><strong> I don't care, What do you want</strong> </p>
+          <p><strong> I don't care, What do you want?</strong> </p>
         </div>
       </div>
       <a class="navbar-burger" id="burger">
@@ -230,34 +230,49 @@
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <h2>Pick a Liquor</h2>
+        <h2>Pick one Liquor</h2>
         <button class="js-modal-trigger button is-dark button is-large btn" data-target="drink-modal">Drink</button>
         </div>
         <div class="tile is-child box recipe-tile">
           <section class="recipe is-dark image">
-          <img src="./assets/Imges/vintage-recipes-1849463.jpg" alt="vintage recipe papers" class="float-right" />
+            <h3 class="title">Food Recipe</h3>
           </section>
+          <br>
           <button class="search-btn button is-dark button is-medium" id="user-food-btn">
             Find me a recipe!
           </button>
           <button class="search-btn button is-dark button is-medium" id="random-food-btn">
             Choose for me!!!
           </button>
-          <p class="title">Food Recipe</p>
-          <div class="food-recipe-content content"></div>
+          <br>
+          <br>
+          <div class="content" id="food-content">
+            <h3 class="generate-title" id="recipe-title"></h3>
+            <img id="food-img" src="">
+            <div id="food-ingredients"></div>
+            <br>
+            <p id="food-instructions"></p>
+          </div>
       </div>
       <div class="tile is-child box drink-tile">
-        <section class="drink is-dark image">
-        <img src="assets/Imges/cocktail-drinks-38428551.jpg" alt="drink-recipe-image"  class="float-right" />
+        <section class="recipe image">
+        <h3 class="title">Drink Recipe</h3>
         </section>
+        <br>
         <button class="search-btn button is-dark button is-medium" id="user-drink-btn">
           Find me a recipe!
         </button>
         <button class="search-btn button is-dark button is-medium" id="random-drink-btn">
           Choose for me!!!
         </button>
-        <p class="title">Drinks</p>
-        <div class="drink-recipe-content content">
+        <br>
+        <br>
+        <div class="content" id="drink-content">
+          <h3 class="generate-title" id="drink-recipe-title"></h3>
+          <img id="drink-img" src="">
+          <ul id="drink-ingredients"></ul>
+          <br>
+          <p id="drink-instructions"></p>
         </div>
       </div>
   </div>
