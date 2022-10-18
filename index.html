@@ -93,7 +93,7 @@
               Main Course
             </label>
             <label class="checkbox">
-              <input type="checkbox" id="food"  value="dessert">
+              <input type="checkbox" class="food" value="dessert">
               Dessert
             </label>
             <label class="checkbox">
@@ -134,10 +134,6 @@
               Grain
             </label>
             <label class="checkbox">
-              <input type="checkbox" class="food" value="peanut">
-              Peanut
-            </label>
-            <label class="checkbox">
               <input type="checkbox" class="food" value="seafood">
               Seafood
             </label>
@@ -172,7 +168,10 @@
             <label class="checkbox">
               <input type="checkbox" class="food" value="vegan">
               Vegan
-            </label>          
+            </label>
+            <br>
+            <br>
+            <h3>Click the find me a recipe button. If nothing comes up or a new recipe doesn't show up that means nothing matches your search, try a few less options!</h3>       
           </div>
         </div>
       </div>
@@ -180,58 +179,9 @@
     <button class="modal-close is-large" aria-label="close"></button>
           </div>
       <button class="js-modal-trigger button is-dark button is-large btn"  data-target="food-modal">Food</button>
-  <!--Drink Modal-->
         <div id="drink-modal" class="modal">
     <div class="modal-background"></div>
-    <div class="modal-content">
-      <div class="box">
-        <h3>Choose a liqour</h3>
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="rum">
-              Rum
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="vodka">
-              Vodka
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="whiskey">
-              Whiskey
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="bourbon">
-              Bourbon
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="scotch">
-              Scotch
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="tequila">
-              Tequila
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="gin">
-              Gin
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="cognac">
-              Cognac
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="brandy">
-              Brandy
-            </label>
-          </div>
         </div>
-      </div>
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-        </div>
-        <h2>Pick one Liquor</h2>
-        <button class="js-modal-trigger button is-dark button is-large btn" data-target="drink-modal">Drink</button>
         </div>
         <div class="tile is-child box recipe-tile">
           <section class="recipe is-dark image">
@@ -259,9 +209,6 @@
         <h3 class="title">Drink Recipe</h3>
         </section>
         <br>
-        <button class="search-btn button is-dark button is-medium" id="user-drink-btn">
-          Find me a recipe!
-        </button>
         <button class="search-btn button is-dark button is-medium" id="random-drink-btn">
           Choose for me!!!
         </button>
@@ -269,8 +216,23 @@
         <br>
         <div class="content" id="drink-content">
           <h3 class="generate-title" id="drink-recipe-title"></h3>
+          <br>
           <img id="drink-img" src="">
-          <ul id="drink-ingredients"></ul>
+          <p id="ingredientOne"></p>
+          <p id="ingredientTwo"></p>
+          <p id="ingredientThree"></p>
+          <p id="ingredientFour"></p>
+          <p id="ingredientFive"></p>
+          <p id="ingredientSix"></p>
+          <p id="ingredientSeven"></p>
+          <p id="ingredientEight"></p>
+          <p id="ingredientNine"></p>
+          <p id="ingredientTen"></p>
+          <p id="ingredientEleven"></p>
+          <p id="ingredientTwelve"></p>
+          <p id="ingredientThirteen"></p>
+          <p id="ingredientFourteen"></p>
+          <p id="ingredientFifteen"></p>
           <br>
           <p id="drink-instructions"></p>
         </div>

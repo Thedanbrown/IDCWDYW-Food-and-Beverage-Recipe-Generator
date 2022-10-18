@@ -1,14 +1,14 @@
-center title
-get ingredients and measurements for drink recipe on the page
-remove nav buttons
-clean up code
-remove drink modal
-clean up food modal text
+center title - micky
+get ingredients and measurements for drink recipe on the page - jerontai and dan
+
+
+remove drink modal -dan
+clean up food modal text -dan
 background image for modal box?
 client side data - micky
-README
-Powerpoint
-final text for everything
-what in the footer?
-fix alert to modal
+README - kevin
+Powerpoint - kevin 
+final text for everything - all
+what in the footer? - micky
+fix alert to modal - dan
 

@@ -5,6 +5,10 @@
   columns: white;
 }
 
+body {
+  background-color: rgb(211, 208, 208);
+}
+
 .navbar, .section {
   background-color: rgb(211, 208, 208);
 }
