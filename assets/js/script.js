@@ -85,8 +85,23 @@ var foodIngredients = document.getElementById('food-ingredients')
 var drinkTitle = document.getElementById('drink-recipe-title')
 var drinkInstructions = document.getElementById('drink-instructions')
 var DrinkImg = document.getElementById('drink-img')
-var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=cce9f01f58714018a7f824038bcbb4f8'
+var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
 var drinkApi = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+var ingredOne = document.getElementById('ingredientOne')
+var ingredTwo = document.getElementById('ingredientTwo')
+var ingredThree = document.getElementById('ingredientThree')
+var ingredFour = document.getElementById('ingredientFour')
+var ingredFive = document.getElementById('ingredientFive')
+var ingredSix = document.getElementById('ingredientSix')
+var ingredSeven = document.getElementById('ingredientSeven')
+var ingredEight = document.getElementById('ingredientEight')
+var ingredNine = document.getElementById('ingredientNine')
+var ingredTen = document.getElementById('ingredientTen')
+var ingredEleven = document.getElementById('ingredientEleven')
+var ingredTwelve = document.getElementById('ingredientTwelve')
+var ingredThirteen = document.getElementById('ingredientThirteen')
+var ingredFourteen = document.getElementById('ingredientFourteen')
+var ingredFifteen = document.getElementById('ingredientFifteen')
 
 //Fetch data from food api and generate completely random recipe. use innerHTML to add recipe to recipe tile on page
 async function getRandomFoodRecipe() {
@@ -121,7 +136,7 @@ async function getUserFoodRecipe() {
   for(let i = 0; i < foodListArray.length; i++) {
     foodListString += foodListArray[i] + ','
   }
-  console.log(foodListString);
+console.log(foodListString);
   var userFoodApi = foodApi + '&number=1&tags=' + foodListString
 const recipe = await fetch(userFoodApi)//add user criteria to fetch request
   .then((response) => response.json())
@@ -144,7 +159,6 @@ const recipe = await fetch(userFoodApi)//add user criteria to fetch request
     foodIngredients.innerHTML = ulEl
 }) .catch(error => {
     console.log(error)
-    alert('No Recipe Fits this Criteria, try a different search!')
   });
 }
 userFoodEL.addEventListener('click', getUserFoodRecipe);
@@ -153,14 +167,34 @@ userFoodEL.addEventListener('click', getUserFoodRecipe);
 // still need to get -> data.drinks[0].strIngredient 1-15,strMeasure 1-15 
 // and set into ul with id "drink-ingredients"
 
+
+
 async function getRandomDrinkRecipe() {
   const recipe = await fetch(drinkApi)
-  .then((response) => response.json()) 
+  .then((response) => response.json())
   .then((data) => {
-    console.log(data)  
+    console.log(data)
     drinkTitle.innerHTML = data.drinks[0].strDrink
     drinkInstructions.innerHTML = data.drinks[0].strInstructions
     DrinkImg.src = data.drinks[0].strDrinkThumb
+    
+    ingredOne.innerText = data.drinks[0].strMeasure1 + data.drinks[0].strIngredient1
+    ingredTwo.innerText = data.drinks[0].strMeasure2 + data.drinks[0].strIngredient2
+    ingredThree.innerText = data.drinks[0].strMeasure3 + data.drinks[0].strIngredient3
+    ingredFour.innerText = data.drinks[0].strMeasure4 + data.drinks[0].strIngredient4
+    ingredFive.innerText = data.drinks[0].strMeasure5 + data.drinks[0].strIngredient5
+    ingredSix.innerText = data.drinks[0].strMeasure6 + data.drinks[0].strIngredient6
+    ingredSeven.innerText = data.drinks[0].strMeasure7 + data.drinks[0].strIngredient7
+    ingredEight.innerText = data.drinks[0].strMeasure8 + data.drinks[0].strIngredient8
+    ingredNine.innerText = data.drinks[0].strMeasure9 + data.drinks[0].strIngredient9
+    ingredTen.innerText = data.drinks[0].strMeasure10 + data.drinks[0].strIngredient10
+    ingredEleven.innerText = data.drinks[0].strMeasure11 + data.drinks[0].strIngredient11
+    ingredTwelve.innerText = data.drinks[0].strMeasure12 + data.drinks[0].strIngredient12
+    ingredThirteen.innerText = data.drinks[0].strMeasure13 + data.drinks[0].strIngredient13
+    ingredFourteen.innerText = data.drinks[0].strMeasure14 + data.drinks[0].strIngredient14
+    ingredFifteen.innerText = data.drinks[0].strMeasure15 + data.drinks[0].strIngredient15
+    
+
 }) .catch(error => {
     console.log(error)
   });
