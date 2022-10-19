@@ -3,6 +3,7 @@
   /* margin-top: 20px; */
   padding: 30px;
   columns: white;
+  text-align: center;
 }
 
 body {
@@ -124,6 +125,10 @@ body {
 
 }
 
+.recentrec {
+  font-weight: bolder;
+}
+
 .linkList a {
   display: block;
 }
@@ -136,5 +141,5 @@ body {
 }
 
 .footer img {
-   width: 30px;
+width: 30px;
 }

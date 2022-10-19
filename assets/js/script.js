@@ -111,17 +111,11 @@ async function getRandomFoodRecipe() {
     foodIngredients.innerHTML = ulEl
  //Sets link to source recipe url to save in local storage
     localStorage.setItem('sourceUrl', JSON.stringify(data.recipes[0].spoonacularSourceUrl));
-    var recipeUrl = localStorage.getItem('sourceUrl');
-    var parseUrl = JSON.parse(recipeUrl)
-    var recipeLink = document.createElement('a');
-    recipeLink.setAttribute('href', parseUrl)
-    recipeLink.innerText = parseUrl
-    recentlyUsedRep.appendChild(recipeLink);
+    recentRecipes();
 }) .catch(error => {
     console.log(error)
   });
 }
-randomFoodEL.addEventListener('click', getRandomFoodRecipe);
 
 //Fetch data from food api and generate recipe using some user criteria. use innerHTML to add recipe to recipe tile on page
 async function getUserFoodRecipe() {
@@ -150,17 +144,20 @@ const recipe = await fetch(userFoodApi)//add user criteria to fetch request
     foodIngredients.innerHTML = ulEl
     //Sets link to source recipe url to save in local storage
     localStorage.setItem('sourceUrl', JSON.stringify(data.recipes[0].spoonacularSourceUrl));
-    var recipeUrl = localStorage.getItem('sourceUrl');
-    var parseUrl = JSON.parse(recipeUrl)
-    var recipeLink = document.createElement('a');
-    recipeLink.setAttribute('href', parseUrl)
-    recipeLink.innerText = parseUrl
-    recentlyUsedRep.appendChild(recipeLink);
+    recentRecipes();
 }) .catch(error => {
     console.log(error)
   });
 }
-userFoodEL.addEventListener('click', getUserFoodRecipe);
+
+function recentRecipes() {
+  var recipeUrl = localStorage.getItem('sourceUrl');
+  var parseUrl = JSON.parse(recipeUrl);
+  var recipeLink = document.createElement('a');
+  recipeLink.setAttribute('href', parseUrl);
+  recipeLink.innerText = parseUrl;
+  recentlyUsedRep.appendChild(recipeLink);
+}
 
 // getting a completely random drink recipe from api
 async function getRandomDrinkRecipe() {
@@ -170,7 +167,6 @@ async function getRandomDrinkRecipe() {
     drinkTitle.innerHTML = data.drinks[0].strDrink
     drinkInstructions.innerHTML = data.drinks[0].strInstructions
     DrinkImg.src = data.drinks[0].strDrinkThumb
-
     console.log(Object.entries(data.drinks[0]))
     var values = Object.entries(data.drinks[0]).filter(function(item) {
         return item[0].includes('Ingredient') && item[1] != null
@@ -187,4 +183,8 @@ async function getRandomDrinkRecipe() {
     console.log(error)
   });
 }
+randomFoodEL.addEventListener('click', getRandomFoodRecipe);
+userFoodEL.addEventListener('click', getUserFoodRecipe);
 randomDrinkEL.addEventListener('click', getRandomDrinkRecipe);
+
+recentRecipes();
