@@ -8,7 +8,7 @@ The point of this website is to give users options for food and drink recipes wh
 ​
 # Links
 -----------------------------------------------------------------------
-# [Deployed Website](https://thedanbrown.github.io/Daily-Schedule-Calender/)
+# [Deployed Website](https://thedanbrown.github.io/IDCWDYW-Food-and-Beverage-Recipe-Generator/)
 # [Repository](https://github.com/Thedanbrown/IDCWDYW-Food-and-Beverage-Recipe-Generator)
 
  ![alt text](assets/Imges/deployed-screenshot.png)
