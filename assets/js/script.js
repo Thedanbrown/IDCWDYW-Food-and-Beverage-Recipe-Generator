@@ -87,7 +87,7 @@ var drinkInstructions = document.getElementById('drink-instructions')
 var DrinkImg = document.getElementById('drink-img')
 var recentRecipe = document.querySelector('navbar-item-2')
 var recentlyUsedRep = document.getElementById('recently-used-recp')
-var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
+var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=cce9f01f58714018a7f824038bcbb4f8'
 var drinkApi = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
 
 //Fetch data from food api and generate completely random recipe. use innerHTML to add recipe to recipe tile on page
