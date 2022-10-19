@@ -27,7 +27,7 @@ body {
   font-family: "Tangerine",
     serif;
   font-size: 50px;
-  margin: auto 150px;
+  margin: auto 200px;
 }
 
 .hero-image {
@@ -123,10 +123,13 @@ body {
   font-size: small;
 }
 
+
 @media screen and (max-width: 775px) {
   div.tile is-parent tile-parent {
     margin: 100px;
   }
 }
 
-
+.footer img {
+   width: 30px;
+}
