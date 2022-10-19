@@ -55,7 +55,7 @@
     <div class="container">
       <div class="tile is-ancestor">
         <div class="tile is-parent tile-parent">
-          <div class="tile is-2 is-child box modals">
+          <div class="tile is-2 is-child box modals" id="modalBox">
             <h2>Food preferences?</h2>
             <!--food Modal-->
             <div id="food-modal" class="modal">
@@ -115,7 +115,6 @@
                         <input type="checkbox" class="food" value="snack">
                         Snack
                       </label>
-
                       <br>
                       <br>
                       <h3>Any dietary restrictions?</h3>
@@ -183,10 +182,6 @@
               <button class="modal-close is-large" aria-label="close"></button>
             </div>
             <button class="js-modal-trigger button is-dark button is-large btn" data-target="food-modal">Food</button>
-            <div id="recently-used-recp"> </div>
-            <div id="drink-modal" class="modal">
-              <div class="modal-background"></div>
-            </div>
           </div>
           <div class="tile is-child box recipe-tile">
             <section class="recipe is-dark image">
@@ -230,8 +225,13 @@
 
             </div>
           </div>
+          <div class="tile is-child box is-12 savedrec" id="recentRecpBox">
+            <h4>Recent Recipes</h4>
+          <div class="linkList" id="recently-used-recp">
+          </div>
+          <br>
+          </div>
         </div>
-
   </section>
 
   <!-- footer  -->

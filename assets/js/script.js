@@ -63,7 +63,7 @@ for(var checkbox of foodCheckBoxes) {
     if(this.checked == true) {
       foodListArray.push(this.value);
 }
-   else {
+  else {
       foodListArray = foodListArray.filter(e => e !== this.value);
 }
   console.log(foodListString)
@@ -95,7 +95,6 @@ async function getRandomFoodRecipe() {
   const recipe = await fetch(foodApi)
   .then((response) => response.json()) 
   .then((data) => {
-    console.log(data)
     let ingredients = [];
     ingredients = [];
     data.recipes[0].extendedIngredients.forEach(ingredient => {
@@ -104,26 +103,20 @@ async function getRandomFoodRecipe() {
     recipeTitle.innerHTML = data.recipes[0].title
     foodInstructions.innerHTML = data.recipes[0].instructions
     foodImg.src = data.recipes[0].image
-    console.log(ingredients)
     var ulEl = "<ul>"
     ingredients.forEach(ingredient => {
       ulEl += "<li>" + ingredient + "</li>" 
     })
     ulEl += "</ul>"
     foodIngredients.innerHTML = ulEl
-
-    // Nav bar local storage
-
-localStorage.setItem('sourceUrl', JSON.stringify(data.recipes[0].sourceUrl));
-var recipeUrl = localStorage.getItem('sourceUrl');
-var parseUrl = JSON.parse(recipeUrl)
-var recipeLink = document.createElement("p");
-recipeLink.innerText = parseUrl
-recentlyUsedRep.appendChild(recipeLink);
-
-    // var localStorageEL = document.createElement('li')
-    // localStorageEL.innerText = forLocalStorage
-
+ //Sets link to source recipe url to save in local storage
+    localStorage.setItem('sourceUrl', JSON.stringify(data.recipes[0].spoonacularSourceUrl));
+    var recipeUrl = localStorage.getItem('sourceUrl');
+    var parseUrl = JSON.parse(recipeUrl)
+    var recipeLink = document.createElement('a');
+    recipeLink.setAttribute('href', parseUrl)
+    recipeLink.innerText = parseUrl
+    recentlyUsedRep.appendChild(recipeLink);
 }) .catch(error => {
     console.log(error)
   });
@@ -141,7 +134,6 @@ console.log(foodListString);
 const recipe = await fetch(userFoodApi)//add user criteria to fetch request
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
     let ingredients = [];
     ingredients = [];
     data.recipes[0].extendedIngredients.forEach(ingredient => {
@@ -150,13 +142,20 @@ const recipe = await fetch(userFoodApi)//add user criteria to fetch request
     recipeTitle.innerHTML = data.recipes[0].title
     foodInstructions.innerHTML = data.recipes[0].instructions
     foodImg.src = data.recipes[0].image
-    console.log(ingredients)
     var ulEl = "<ul>"
     ingredients.forEach(ingredient => {
       ulEl += "<li>" + ingredient + "</li>" 
     })
     ulEl += "</ul>"
     foodIngredients.innerHTML = ulEl
+    //Sets link to source recipe url to save in local storage
+    localStorage.setItem('sourceUrl', JSON.stringify(data.recipes[0].spoonacularSourceUrl));
+    var recipeUrl = localStorage.getItem('sourceUrl');
+    var parseUrl = JSON.parse(recipeUrl)
+    var recipeLink = document.createElement('a');
+    recipeLink.setAttribute('href', parseUrl)
+    recipeLink.innerText = parseUrl
+    recentlyUsedRep.appendChild(recipeLink);
 }) .catch(error => {
     console.log(error)
   });
@@ -164,12 +163,10 @@ const recipe = await fetch(userFoodApi)//add user criteria to fetch request
 userFoodEL.addEventListener('click', getUserFoodRecipe);
 
 // getting a completely random drink recipe from api
-
 async function getRandomDrinkRecipe() {
   const recipe = await fetch(drinkApi)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
     drinkTitle.innerHTML = data.drinks[0].strDrink
     drinkInstructions.innerHTML = data.drinks[0].strInstructions
     DrinkImg.src = data.drinks[0].strDrinkThumb
@@ -186,8 +183,6 @@ async function getRandomDrinkRecipe() {
       listItem.innerText = listItemContent
       recipeItem.appendChild(listItem);
     })
-
-    console.log(values)
 }) .catch(error => {
     console.log(error)
   });
