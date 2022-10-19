@@ -34,263 +34,222 @@
     <div class="navbar-menu" id="nav-links" title="">
       <div class="navbar-end">
         <a href="#" class="navbar-item">My Account</a>
-        <a href="#" class="navbar-item">Recent Recipes</a>
+        <a href="#" class="navbar-item">
+
+          <ul>Recently Used Recipes</ul>
+        </a>
         <a href="#" class="navbar-item">Order/Save Missing Recipes</a>
       </div>
     </div>
   </nav>
 
   <section class="hero is-medium is-dark hero-image">
-  <div class="hero-body">
-    <p class="hero-title">
-      A random food and drink recipe generator for when no one knows what they want
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent tile-parent">
-        <div class="tile is-2 is-child box modals">
-          <h2>Food preferences?</h2>
-          <!--food Modal-->
-          <div id="food-modal" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-              <div class="box">
-                <h3>Choose any specific protein or type of dish you would like.</h3>
-        <br>
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="beef">
-              Beef
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="chicken">
-              Chicken
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="pork">
-              Pork
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="fish">
-              Fish
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="shellfish">
-              Shellfish
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="lamb">
-              Lamb
-            </label>
-            <br>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="main-course">
-              Main Course
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" id="food"  value="dessert">
-              Dessert
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="breakfast">
-              Breakfast
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="appetizer">
-              Appetizer
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="soup">
-              Soup
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="snack">
-              Snack
-            </label>
-
-            <br>
-            <br>
-            <h3>Any dietary restrictions?</h3>
-            <br>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="dairy-free">
-              Dairy Free
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="egg-free">
-              Egg Free
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="gluten">
-              Gluten
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="grain">
-              Grain
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="peanut">
-              Peanut
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="seafood">
-              Seafood
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="sesame">
-              Sesame
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="shellfish">
-              Shellfish
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="soy">
-              Soy
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="sulfite">
-              Sulfite
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="tree-nut">
-              Tree nut
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="wheat">
-              Wheat
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="vegetarian">
-              Vegetarian
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="food" value="vegan">
-              Vegan
-            </label>          
-          </div>
-        </div>
-      </div>
+    <div class="hero-body">
+      <p class="hero-title">
+        A random food and drink recipe generator for when no one knows what they want
+      </p>
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-          </div>
-      <button class="js-modal-trigger button is-dark button is-large btn"  data-target="food-modal">Food</button>
-  <!--Drink Modal-->
-        <div id="drink-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <div class="box">
-        <h3>Choose a liqour</h3>
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="rum">
-              Rum
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="vodka">
-              Vodka
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="whiskey">
-              Whiskey
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="bourbon">
-              Bourbon
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="scotch">
-              Scotch
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="tequila">
-              Tequila
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="gin">
-              Gin
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="cognac">
-              Cognac
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" class="drink" value="brandy">
-              Brandy
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-        </div>
-        <h2>Pick one Liquor</h2>
-        <button class="js-modal-trigger button is-dark button is-large btn" data-target="drink-modal">Drink</button>
-        </div>
-        <div class="tile is-child box recipe-tile">
-          <section class="recipe is-dark image">
-            <h3 class="title">Food Recipe</h3>
-          </section>
-          <br>
-          <button class="search-btn button is-dark button is-medium" id="user-food-btn">
-            Find me a recipe!
-          </button>
-          <button class="search-btn button is-dark button is-medium" id="random-food-btn">
-            Choose for me!!!
-          </button>
-          <br>
-          <br>
-          <div class="content" id="food-content">
-            <h3 class="generate-title" id="recipe-title"></h3>
-            <img id="food-img" src="">
-            <div id="food-ingredients"></div>
-            <br>
-            <p id="food-instructions"></p>
-          </div>
-      </div>
-      <div class="tile is-child box drink-tile">
-        <section class="recipe image">
-        <h3 class="title">Drink Recipe</h3>
-        </section>
-        <br>
-        <button class="search-btn button is-dark button is-medium" id="user-drink-btn">
-          Find me a recipe!
-        </button>
-        <button class="search-btn button is-dark button is-medium" id="random-drink-btn">
-          Choose for me!!!
-        </button>
-        <br>
-        <br>
-        <div class="content" id="drink-content">
-          <h3 class="generate-title" id="drink-recipe-title"></h3>
-          <img id="drink-img" src="">
-          <ul id="drink-ingredients"></ul>
-          <br>
-          <p id="drink-instructions"></p>
-        </div>
-      </div>
-  </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent tile-parent">
+          <div class="tile is-2 is-child box modals" id="modalBox">
+            <h2>Food preferences?</h2>
+            <!--food Modal-->
+            <div id="food-modal" class="modal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="box">
+                  <h3>Choose any specific protein or type of dish you would like.</h3>
+                  <br>
+                  <div class="field">
+                    <div class="control">
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="beef">
+                        Beef
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="chicken">
+                        Chicken
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="pork">
+                        Pork
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="fish">
+                        Fish
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="shellfish">
+                        Shellfish
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="lamb">
+                        Lamb
+                      </label>
+                      <br>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="main-course">
+                        Main Course
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="dessert">
+                        Dessert
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="breakfast">
+                        Breakfast
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="appetizer">
+                        Appetizer
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="soup">
+                        Soup
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="snack">
+                        Snack
+                      </label>
+                      <br>
+                      <br>
+                      <h3>Any dietary restrictions?</h3>
+                      <br>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="dairy-free">
+                        Dairy Free
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="egg-free">
+                        Egg Free
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="gluten">
+                        Gluten
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="grain">
+                        Grain
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="seafood">
+                        Seafood
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="sesame">
+                        Sesame
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="shellfish">
+                        Shellfish
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="soy">
+                        Soy
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="sulfite">
+                        Sulfite
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="tree-nut">
+                        Tree nut
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="wheat">
+                        Wheat
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="vegetarian">
+                        Vegetarian
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="food" value="vegan">
+                        Vegan
+                      </label>
+                      <br>
+                      <br>
+                      <h3>Click the find me a recipe button. If nothing comes up or a new recipe doesn't show up that
+                        means nothing matches your search, try a few less options!</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+            <button class="js-modal-trigger button is-dark button is-large btn" data-target="food-modal">Food</button>
+          </div>
+          <div class="tile is-child box recipe-tile">
+            <section class="recipe is-dark image">
+              <h3 class="title">Food Recipe</h3>
+            </section>
+            <br>
+            <button class="search-btn button is-dark button is-medium" id="user-food-btn">
+              Find me a recipe!
+            </button>
+            <button class="search-btn button is-dark button is-medium" id="random-food-btn">
+              Choose for me!!!
+            </button>
+            <br>
+            <br>
+            <div class="content" id="food-content">
+              <h3 class="generate-title" id="recipe-title"></h3>
+              <img id="food-img" src="">
+              <div id="food-ingredients"></div>
+              <br>
+              <p id="food-instructions"></p>
+
+            </div>
+          </div>
+          <div class="tile is-child box drink-tile">
+            <section class="recipe image">
+              <h3 class="title">Drink Recipe</h3>
+            </section>
+            <br>
+            <button class="search-btn button is-dark button is-medium" id="random-drink-btn">
+              Choose for me!!!
+            </button>
+            <br>
+            <br>
+            <div class="content" id="drink-content">
+              <h3 class="generate-title" id="drink-recipe-title"></h3>
+              <br>
+              <img id="drink-img" src="">
+              <ul id="drinkIng"></ul>
+              <br>
+              <p id="drink-instructions"></p>
+
+            </div>
+          </div>
+          <div class="tile is-child box is-12 savedrec" id="recentRecpBox">
+            <h4>Recent Recipes</h4>
+          <div class="linkList" id="recently-used-recp">
+          </div>
+          <br>
+          </div>
+        </div>
   </section>
 
   <!-- footer  -->
   <footer class="footer bg-black">
     <div class="content has-text-centered">
+      <h2> A Random Food and Drink Generator</h2>
       <p>
-        Copyright&copy; 2022 Random Food and Drink Generator
+        Copyright&copy; 2022 IDCWDYW
+
       </p>
+      <a href="https://github.com/Thedanbrown/IDCWDYW-Food-and-Beverage-Recipe-Generator" target="_blank"> <img
+          src=" ./assets/Imges/github-logo.jpg" alt="github-link" "></a>
     </div>
 
 
   </footer>
 
-  <script src="./assets/js/script.js"></script>
+  <script src=" ./assets/js/script.js"></script>
 
 </body>
 
