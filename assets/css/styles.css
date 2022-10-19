@@ -52,6 +52,8 @@ body {
 
 .tile {
   text-align: center;
+  flex-wrap: wrap;
+  
 }
 
 .recipe-tile{
@@ -108,12 +110,22 @@ body {
   background-color: #ffffff;
   font-size: 1rem;
   color: black;
+  word-wrap: break-word;
+}
+
+.modals a {
+  display: block;
+  padding: 8px
 }
 
 .modals h2 {
   margin: 10px;
   font-weight: bold;
 
+}
+
+.linkList a {
+  display: block;
 }
 
 .footer {
@@ -123,10 +135,5 @@ body {
   font-size: small;
 }
 
-@media screen and (max-width: 775px) {
-  div.tile is-parent tile-parent {
-    margin: 100px;
-  }
-}
 
 
