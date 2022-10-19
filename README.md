@@ -1,30 +1,30 @@
 # IDCWDYW-Food-and-Beverage-Recipe-Generator
 I don't care, what do you want - a food and beverage recipe generator for when no one knows what they want!
 ​
-Features for my project:
+#Features for my project:
 -----------------------------------------------------------------------
 ​
 The point of this website is to give users options for food and drink recipes when things are hard to figure out. The website will prevent many unnecessary arguments and solve problems like indecisiveness between users. To use the website just simply click on our choose for me button on either our Food or drink side of our website. If you have any preferences that you want to include, go to the left side of the page and you will see food preferences. Click the food button and check off any thing that you want to add. Afterwards click find me a recipe and then your recipe will show.
 ​
-Links
+#Links
 -----------------------------------------------------------------------
 # [Deployed Website](https://thedanbrown.github.io/Daily-Schedule-Calender/)
 # [Repository](https://github.com/Thedanbrown/IDCWDYW-Food-and-Beverage-Recipe-Generator)
 
  ![alt text](assets/Imges/deployed-screenshot.png)
 
-Usage:
+#Usage:
 -----------------------------------------------------------------------
 once deployed, the webpage can be viewed in a traditional browser.
 ​
-Built with
+#Built with
 -----------------------------------------------------------------------
 Html
 Css
 Javascript
 bulma css framework
 ​
-Api's used:
+#Api's used:
 -----------------------------------------------------------------------
 ​# [Spoonacular API](https://spoonacular.com/food-api/)
 ​# [The CocktailDB](https://www.thecocktaildb.com/api/)
@@ -34,7 +34,7 @@ Collaborators:
 ​# [Micky-Ad](https://github.com/Micky-Ad)
 ​# [Kevin Roman](https://github.com/KevinRoman03)
 
-​License:
+​#License:
 
 MIT License
 
