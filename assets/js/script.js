@@ -85,6 +85,8 @@ var foodIngredients = document.getElementById('food-ingredients')
 var drinkTitle = document.getElementById('drink-recipe-title')
 var drinkInstructions = document.getElementById('drink-instructions')
 var DrinkImg = document.getElementById('drink-img')
+var recentRecipe = document.querySelector('navbar-item-2')
+var recentlyUsedRep = document.getElementById('recently-used-recp')
 var foodApi = 'https://api.spoonacular.com/recipes/random?apiKey=e3e8dd67fa0a45c5b197633ec21de3a9'
 var drinkApi = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
 
@@ -109,6 +111,19 @@ async function getRandomFoodRecipe() {
     })
     ulEl += "</ul>"
     foodIngredients.innerHTML = ulEl
+
+    // Nav bar local storage
+
+localStorage.setItem('sourceUrl', JSON.stringify(data.recipes[0].sourceUrl));
+var recipeUrl = localStorage.getItem('sourceUrl');
+var parseUrl = JSON.parse(recipeUrl)
+var recipeLink = document.createElement("p");
+recipeLink.innerText = parseUrl
+recentlyUsedRep.appendChild(recipeLink);
+
+    // var localStorageEL = document.createElement('li')
+    // localStorageEL.innerText = forLocalStorage
+
 }) .catch(error => {
     console.log(error)
   });
