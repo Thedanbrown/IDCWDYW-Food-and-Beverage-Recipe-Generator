@@ -5,6 +5,10 @@
   columns: white;
 }
 
+body {
+  background-color: rgb(211, 208, 208);
+}
+
 .navbar, .section {
   background-color: rgb(211, 208, 208);
 }
@@ -23,7 +27,7 @@
   font-family: "Tangerine",
     serif;
   font-size: 50px;
-  margin: auto 150px;
+  margin: auto 200px;
 }
 
 .hero-image {
@@ -48,6 +52,8 @@
 
 .tile {
   text-align: center;
+  flex-wrap: wrap;
+  
 }
 
 .recipe-tile{
@@ -104,12 +110,22 @@
   background-color: #ffffff;
   font-size: 1rem;
   color: black;
+  word-wrap: break-word;
+}
+
+.modals a {
+  display: block;
+  padding: 8px
 }
 
 .modals h2 {
   margin: 10px;
   font-weight: bold;
 
+}
+
+.linkList a {
+  display: block;
 }
 
 .footer {
@@ -119,10 +135,6 @@
   font-size: small;
 }
 
-@media screen and (max-width: 775px) {
-  div.tile is-parent tile-parent {
-    margin: 100px;
-  }
+.footer img {
+   width: 30px;
 }
-
-
